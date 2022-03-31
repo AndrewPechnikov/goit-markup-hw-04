@@ -100,34 +100,60 @@ body {
 }
 
 .contacts .link {
+  display: flex;
+  align-items: center;
   color: var(--main-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+
+
 .contacts .item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .contacts .link:hover,
-.contacts .link:focus {
+.contacts .link:focus
+{
   color: var(--focus-color);
 }
+
+
+
+.logo-mail, .logo-phone{
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+
+
 
 /* Hero */
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: #2f303a;
+  background-image: linear-gradient(to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+    url(../image/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 1600px;
+  background-position: center;
+
+
+
+  
 }
 
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: #2f303a;
+  
+  
 }
 
 .hero-title {
@@ -195,6 +221,14 @@ body {
 
 .features .description {
   margin: 0;
+}
+
+.thumb{
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  background-color: #F5F4FA;
+  margin-bottom: 30px ;
 }
 
 /* Services */
@@ -373,14 +407,15 @@ body {
 }
 
 .footer-mail:hover,
-.footer-telephone:hover {
+.footer-telephone:hover,
+.footer-mail:focus,
+.footer-telephone:focus {
   color: var(--focus-color);
 }
 
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
-
   color: var(--white-text);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
