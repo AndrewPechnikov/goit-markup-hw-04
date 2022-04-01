@@ -5,6 +5,7 @@
   --white-translucent-color: rgba(255, 255, 255, 0.6);
   --focus-color: #2196f3;
   --footer-color: #2f303a;
+  --color-links: #AFB1B8;
 }
 
 body {
@@ -269,7 +270,7 @@ body {
 
 .command .description {
   margin: 0;
-
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -285,8 +286,86 @@ body {
   padding-bottom: 30px;
 }
 
+.social-networks{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+
+}
+
+
+.link-social-networks{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--color-links);
+  /* Хз как сделать по другому. свг центрируется в кнопке, хз как сделать в ссылке */
+  text-align: center;
+  padding-top: 12px;
+
+}
+
+
+
+
+.logo-links{
+  fill: currentColor;
+} 
+.link-social-networks:hover,
+.link-social-networks:focus{
+  color: var(--white-text);
+  background-color: var(--focus-color);
+
+}
+
+
+
+
 .command-background {
   background-color: #f5f4fa;
+}
+
+
+/* Partners */
+
+
+.partners {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+
+}
+
+
+.link-partner {
+  display: inline-block;
+  width: 170px;
+  height: 92px;
+  
+  border: 1px solid var(--color-links);
+  border-radius: 4px;
+  color: var(--color-links);
+  /* Хз как сделать по другому. свг центрируется в кнопке, хз как сделать в ссылке */
+  text-align: center;
+  padding-top: 23px;
+
+}
+
+
+
+
+.partner-logo {
+  fill: currentColor;
+}
+
+.partner-logo:hover,
+.partner-logo:focus {
+  color: var(--white-text);
+  background-color: var(--focus-color);
+
 }
 
 /* Portfolio */
