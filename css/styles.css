@@ -5,7 +5,7 @@
   --white-translucent-color: rgba(255, 255, 255, 0.6);
   --focus-color: #2196f3;
   --footer-color: #2f303a;
-  --color-links: #AFB1B8;
+  --color-links: #afb1b8;
 }
 
 body {
@@ -16,6 +16,19 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .link {
@@ -109,52 +122,41 @@ body {
   letter-spacing: 0.02em;
 }
 
-
-
 .contacts .item:not(:last-child) {
   margin-right: 30px;
 }
 
 .contacts .link:hover,
-.contacts .link:focus
-{
+.contacts .link:focus {
   color: var(--focus-color);
 }
 
-
-
-.logo-mail, .logo-phone{
+.logo-mail,
+.logo-phone {
   fill: currentColor;
   margin-right: 10px;
 }
-
-
-
 
 /* Hero */
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-image: linear-gradient(to right,
-  rgba(47, 48, 58, 0.4),
-  rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../image/hero.jpg);
   background-repeat: no-repeat;
   background-size: 1600px;
   background-position: center;
-
-
-
-  
 }
 
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  
-  
 }
 
 .hero-title {
@@ -224,12 +226,14 @@ body {
   margin: 0;
 }
 
-.thumb{
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
-  background-color: #F5F4FA;
-  margin-bottom: 30px ;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
 }
 
 /* Services */
@@ -287,77 +291,60 @@ body {
   padding-bottom: 30px;
 }
 
-.social-networks{
+.social-networks {
   align-items: center;
   justify-content: center;
   display: flex;
   gap: 10px;
-
 }
 
-
-.link-social-networks{
-  display: inline-block;
+.link-social-networks {
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: var(--color-links);
   /* Хз как сделать по другому. свг центрируется в кнопке, хз как сделать в ссылке */
-  text-align: center;
-  padding-top: 12px;
-
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
-.logo-links{
+.logo-links {
   fill: currentColor;
-} 
+}
+
 .link-social-networks:hover,
-.link-social-networks:focus{
+.link-social-networks:focus {
   color: var(--white-text);
   background-color: var(--focus-color);
 }
-
-
-
 
 .command-background {
   background-color: #f5f4fa;
 }
 
-
 /* Partners */
-
 
 .partners {
   align-items: center;
   justify-content: center;
   display: flex;
   gap: 10px;
-
 }
 
-
 .link-partner {
-  display: inline-block;
+  display: flex;
   width: 170px;
   height: 92px;
   border: 1px solid var(--color-links);
   border-radius: 4px;
   color: var(--color-links);
   /* Хз как сделать по другому. свг центрируется в кнопке, хз как сделать в ссылке */
-  text-align: center;
-  padding-top: 16px;
-
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
 .partner-logo {
-
   fill: currentColor;
 }
 
@@ -365,7 +352,6 @@ body {
 .link-partner:focus {
   color: var(--focus-color);
   border-color: var(--focus-color);
-
 }
 
 /* Portfolio */
@@ -400,9 +386,8 @@ body {
 .filter button:focus {
   color: var(--white-text);
   background: var(--focus-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-  0px 1px 2px rgba(0, 0, 0, 0.08),
-  0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Example */
@@ -443,9 +428,8 @@ body {
 }
 
 .portfolio.list .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-  0px 4px 4px rgba(0, 0, 0, 0.06),
-  1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .sign {
@@ -467,19 +451,18 @@ body {
   gap: 70px;
 }
 
-.center-footer{
+.center-footer {
   padding-top: 12px;
 }
 
-.footer-title{
+.footer-title {
   margin: 0;
   margin-bottom: 20px;
-  text-transform: uppercase;;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
   color: var(--white-text);
 }
-
 
 .center-footer .link-social-networks {
   background-color: rgba(255, 255, 255, 0.1);
